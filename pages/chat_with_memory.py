@@ -35,9 +35,9 @@ msgs = StreamlitChatMessageHistory()
 memory = ConversationBufferMemory(
     chat_memory=msgs, return_messages=True, memory_key="chat_history"
 )
-if len(msgs.messages) == 0 or st.sidebar.button("Reset chat history"):
+if len(msgs.messages) == 0 or st.sidebar.button("Reset"):
     msgs.clear()
-    msgs.add_ai_message("How can I help you?")
+    msgs.add_ai_message("How may I help you solve your problem?")
     st.session_state.steps = {}
 
 avatars = {"human": "user", "ai": "assistant"}
