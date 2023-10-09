@@ -38,7 +38,7 @@ memory = ConversationBufferMemory(
 if len(msgs.messages) == 0 or st.sidebar.button("Reset"):
     msgs.clear()
     msgs.add_ai_message("How may I help you solve your problem?")
-    msgs.add_ai_message("Please input message below.")
+    msgs.add_ai_message("Please input message below.  ↓ ")
     st.session_state.steps = {}
 
 avatars = {"human": "user", "ai": "assistant"}
